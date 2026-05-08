@@ -1,0 +1,12 @@
+### Search for publications with the title "Skansen"
+GET https://pre.diva-portal.org/rest/record/searchResult/diva-outputSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><titleSearchTerm>Skansen</titleSearchTerm></includePart></include><start>1</start><rows>20</rows></search>
+Accept: application/vnd.cora.recordList+xml
+
+
+### Search for publication with DOI "10.1000/182"
+GET https://pre.diva-portal.org/rest/record/searchResult/diva-outputSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><doiSearchTerm>10.1000/182</doiSearchTerm></includePart></include><start>1</start><rows>20</rows></search>
+Accept: application/vnd.cora.recordList+xml
+
+### Free text search for "Christina" within nordiskamuseets records
+GET https://pre.diva-portal.org/rest/record/searchResult/diva-outputSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><genericSearchTerm>Christina</genericSearchTerm></includePart></include><start>1</start><rows>20</rows></search>
+Accept: application/vnd.cora.recordList+xml

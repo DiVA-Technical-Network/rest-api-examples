@@ -1,0 +1,84 @@
+### Update publication. Copy the data group from the response of create or read and make modifications.
+
+POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-output/25
+Content-Type: application/vnd.cora.recordgroup+xml
+Accept: application/vnd.cora.record+xml
+AuthToken: 8ccc6452-0753-4622-9547-15fab6cb61cd
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<output>
+    <recordInfo>
+    <validationType>
+        <linkedRecordType>validationType</linkedRecordType>
+        <linkedRecordId>publication_book</linkedRecordId>
+    </validationType>
+    <dataDivider>
+        <linkedRecordType>system</linkedRecordType>
+        <linkedRecordId>divaData</linkedRecordId>
+    </dataDivider>
+    <permissionUnit>
+        <linkedRecordType>permissionUnit</linkedRecordType>
+        <linkedRecordId>uu</linkedRecordId>
+    </permissionUnit>
+    <visibility>published</visibility>
+    <tsVisibility>2026-05-08T09:10:02.954634Z</tsVisibility>
+    <inTrashBin>false</inTrashBin>
+    <id>25</id>
+    <type>
+        <linkedRecordType>recordType</linkedRecordType>
+        <linkedRecordId>diva-output</linkedRecordId>
+    </type>
+    <createdBy>
+        <linkedRecordType>user</linkedRecordType>
+        <linkedRecordId>coraUser:491144693381458</linkedRecordId>
+    </createdBy>
+    <tsCreated>2026-05-08T09:10:02.958020Z</tsCreated>
+    <updated repeatId="0">
+        <tsUpdated>2026-05-08T09:10:02.958020Z</tsUpdated>
+        <updatedBy>
+        <linkedRecordType>user</linkedRecordType>
+        <linkedRecordId>coraUser:491144693381458</linkedRecordId>
+        </updatedBy>
+    </updated>
+    <urn>urn:nbn:se:diva-25</urn>
+    </recordInfo>
+    <dataQuality>2026</dataQuality>
+    <genre type="outputType">publication_book</genre>
+    <language repeatId="0">
+    <languageTerm authority="iso639-2b" type="code">swe</languageTerm>
+    </language>
+    <genre type="contentType">pop</genre>
+    <titleInfo lang="swe">
+    <title>En testpost skapad med API</title>
+    </titleInfo>
+    <name repeatId="0" type="personal">
+    <namePart type="given">Test</namePart>
+    <namePart type="family">Testsson</namePart>
+    <nameIdentifier type="localId">test</nameIdentifier>
+    <role>
+        <roleTerm repeatId="0">aut</roleTerm>
+    </role>
+    <affiliation repeatId="0">
+        <namePart>Testuniversitetet</namePart>
+        <country>se</country>
+    </affiliation>
+    </name>
+    <abstract lang="swe" repeatId="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus nunc, feugiat quis nulla et, tincidunt pulvinar nulla. Phasellus urna massa, tempor a nulla ac, tincidunt maximus felis. Cras commodo neque dignissim vulputate varius. Duis purus tortor, faucibus sed velit nec, vestibulum accumsan augue. Praesent placerat eget tellus eget placerat. Mauris id metus eu quam iaculis rhoncus ac nec elit. Suspendisse nec tellus vehicula, facilisis libero nec, placerat lorem. Sed tincidunt, ante et semper faucibus, quam magna commodo magna, in fringilla nibh purus non est. In porttitor magna a nunc aliquam pulvinar a interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mollis nulla a scelerisque aliquam. Morbi nec viverra erat. Phasellus blandit, nisl vitae convallis aliquet, justo lorem congue mauris, eu tincidunt sem eros id velit. Donec ut nulla id sem ultrices lobortis.</abstract>
+    <originInfo>
+    <dateIssued>
+        <year>2026</year>
+    </dateIssued>
+    <name otherType="publisher" repeatId="0" type="corporate">
+        <namePart type="publisher">Testförlaget</namePart>
+        <place>
+        <placeTerm>Stockholm</placeTerm>
+        </place>
+        <role>
+        <roleTerm>pbl</roleTerm>
+        </role>
+    </name>
+    </originInfo>
+    <classification authority="ssif" repeatId="0">1</classification>
+    <identifier displayLabel="print" repeatId="0" type="isbn">3880531013</identifier>
+</output>

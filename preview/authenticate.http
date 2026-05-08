@@ -1,0 +1,26 @@
+### Get example users
+# This request fetchches info about the system.On test environments like preview, it includes a list of example users
+# that can be used to log in and test the API.
+GET https://preview.diva.cora.epc.ub.uu.se/rest/
+Accept: application/vnd.cora.deploymentInfo+json
+
+
+### Log in with app token
+# Authenticates the user and returns an authentication token that can be used in subsequent requests to authenticate the user.
+# Use personal login id and app token or use an example user (see above)
+# The response includes a token that can be sent in the AuthToken header of subsequent requests to authenticate the user.
+# The token is valid for a short time (usually 10 minutes) and can be renewed by sending a request
+POST https://preview.diva.cora.epc.ub.uu.se/login/rest/apptoken
+Content-Type: application/vnd.cora.login
+Accept: application/vnd.cora.authentication+json
+
+dominAdminUU@diva.cora.uu.se
+e72a3c42-a9c1-4e75-9d16-d439b47eb0f2
+
+
+### Renew token
+# If the token is expired, you can renew it by sending a request to the renew endpoint
+# Use the renew URL from the action link in the login/renew response
+POST https://preview.diva.cora.epc.ub.uu.se/login/rest/authToken/a0e74efc-f5f6-4ec2-917a-954c4a4ad937
+Accept: application/vnd.cora.authentication+json
+Authtoken: 35410f58-0ae5-4766-bdbc-831c2e5af1ff

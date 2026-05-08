@@ -1,0 +1,62 @@
+### Create an output record of type publication_book
+POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-output
+Content-Type: application/vnd.cora.recordgroup+xml
+Accept: application/vnd.cora.record+xml
+AuthToken: 8ccc6452-0753-4622-9547-15fab6cb61cd
+
+<?xml version="1.0" encoding="UTF-8"?>
+<output>
+    <recordInfo>
+        <validationType>
+            <linkedRecordType>validationType</linkedRecordType>
+            <linkedRecordId>publication_book</linkedRecordId>
+        </validationType>
+    <dataDivider>
+        <linkedRecordType>system</linkedRecordType>
+        <linkedRecordId>divaData</linkedRecordId>
+    </dataDivider>
+    <permissionUnit>
+        <linkedRecordType>permissionUnit</linkedRecordType>
+        <linkedRecordId>uu</linkedRecordId>
+    </permissionUnit>
+    <visibility>published</visibility>
+    </recordInfo>
+    <dataQuality>2026</dataQuality>
+    <genre type="outputType">publication_book</genre>
+    <language repeatId="0">
+        <languageTerm type="code" authority="iso639-2b">swe</languageTerm>
+    </language>
+    <genre type="contentType">pop</genre>
+    <titleInfo lang="swe">
+        <title>En testpost skapad med API</title>
+    </titleInfo>
+    <name type="personal" repeatId="0">
+        <namePart type="given">Test</namePart>
+        <namePart type="family">Testsson</namePart>
+        <nameIdentifier type="localId">test</nameIdentifier>
+        <role>
+            <roleTerm repeatId="0">aut</roleTerm>
+        </role>
+        <affiliation repeatId="0">
+            <namePart>Testuniversitetet</namePart>
+            <country>se</country>
+        </affiliation>
+    </name>
+    <abstract lang="swe" repeatId="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus nunc, feugiat quis nulla et, tincidunt pulvinar nulla. Phasellus urna massa, tempor a nulla ac, tincidunt maximus felis. Cras commodo neque dignissim vulputate varius. Duis purus tortor, faucibus sed velit nec, vestibulum accumsan augue. Praesent placerat eget tellus eget placerat. Mauris id metus eu quam iaculis rhoncus ac nec elit. Suspendisse nec tellus vehicula, facilisis libero nec, placerat lorem. Sed tincidunt, ante et semper faucibus, quam magna commodo magna, in fringilla nibh purus non est. In porttitor magna a nunc aliquam pulvinar a interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mollis nulla a scelerisque aliquam. Morbi nec viverra erat. Phasellus blandit, nisl vitae convallis aliquet, justo lorem congue mauris, eu tincidunt sem eros id velit. Donec ut nulla id sem ultrices lobortis.</abstract>
+    <originInfo>
+        <dateIssued>
+            <year>2026</year>
+        </dateIssued>
+        <name type="corporate" otherType="publisher" repeatId="0">
+            <namePart type="publisher">Testförlaget</namePart>
+            <place>
+                <placeTerm>Stockholm</placeTerm>
+            </place>
+            <role>
+                <roleTerm>pbl</roleTerm>
+            </role>
+        </name>
+    </originInfo>
+    <classification authority="ssif" repeatId="0">1</classification>
+    <identifier type="isbn" displayLabel="print" repeatId="0">3880531013</identifier>
+</output>

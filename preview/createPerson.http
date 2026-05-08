@@ -1,0 +1,30 @@
+POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-person
+Content-Type: application/vnd.cora.recordgroup+xml
+Accept: application/vnd.cora.record+xml
+AuthToken: 5c36f0e1-9f2e-4581-9be4-56771812cc8a
+
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+    <recordInfo>
+        <validationType>
+            <linkedRecordType>validationType</linkedRecordType>
+            <linkedRecordId>diva-person</linkedRecordId>
+        </validationType>
+        <dataDivider>
+            <linkedRecordType>system</linkedRecordType>
+            <linkedRecordId>divaData</linkedRecordId>
+        </dataDivider>
+    </recordInfo>
+    <authority>
+        <name type="personal">
+            <namePart type="given">Test</namePart>
+            <namePart type="family">Testsson</namePart>
+        </name>
+    </authority>
+    <email repeatId="0">test@test.com</email>
+    <nameIdentifier type="orcid" repeatId="0">0000-0002-1825-0097</nameIdentifier>
+    <affiliation repeatId="0">
+        <namePart>Testuniversitetet</namePart>
+        <country>se</country>
+    </affiliation>
+</person>
