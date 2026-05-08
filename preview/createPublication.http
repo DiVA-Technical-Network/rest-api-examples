@@ -2,7 +2,7 @@
 POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-output
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: 8ccc6452-0753-4622-9547-15fab6cb61cd
+AuthToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 <?xml version="1.0" encoding="UTF-8"?>
 <output>

@@ -1,7 +1,7 @@
 POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-person
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: 5c36f0e1-9f2e-4581-9be4-56771812cc8a
+AuthToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 <?xml version="1.0" encoding="UTF-8"?>
 <person>

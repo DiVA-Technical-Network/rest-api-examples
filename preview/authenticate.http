@@ -15,12 +15,12 @@ Content-Type: application/vnd.cora.login
 Accept: application/vnd.cora.authentication+json
 
 dominAdminUU@diva.cora.uu.se
-e72a3c42-a9c1-4e75-9d16-d439b47eb0f2
+xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 
 ### Renew token
 # If the token is expired, you can renew it by sending a request to the renew endpoint
 # Use the renew URL from the action link in the login/renew response
-POST https://preview.diva.cora.epc.ub.uu.se/login/rest/authToken/a0e74efc-f5f6-4ec2-917a-954c4a4ad937
+POST https://preview.diva.cora.epc.ub.uu.se/login/rest/authToken/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Accept: application/vnd.cora.authentication+json
-Authtoken: 35410f58-0ae5-4766-bdbc-831c2e5af1ff
+Authtoken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx

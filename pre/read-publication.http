@@ -1,0 +1,17 @@
+### Read publication XML
+GET https://pre.diva-portal.org/rest/record/diva-output/45
+Accept: application/vnd.cora.record+xml
+
+### Read publication XML
+# The decorated format includes linked records and field texts, making it ideal for displaying in a user interface.
+GET https://pre.diva-portal.org/rest/record/diva-output/45
+Accept: application/vnd.cora.record-decorated+xml
+
+### Read publication JSON
+GET https://pre.diva-portal.org/rest/record/diva-output/45
+Accept: application/vnd.cora.record+json
+
+### Read publication JSON
+# The decorated format includes linked records and field texts, making it ideal for displaying in a user interface.
+GET https://pre.diva-portal.org/rest/record/diva-output/45
+Accept: application/vnd.cora.record-decorated+json
