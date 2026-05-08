@@ -39,6 +39,8 @@ Once authenticated, you can use the token to modify records on preview:
 - [updatePublication.http](preview/updatePublication.http) — Update a publication (copy the record from create/read response and modify it)
 - [deletePublication.http](preview/deletePublication.http) — Delete a publication by ID
 
+NOTE: Currently, the only way to see view data format of e.g. a publication is to either get the metadata using the API or to log in to [JsClient](https://preview.diva.cora.epc.ub.uu.se/jsclient) and navigating to the definition viewer from the relevant form.
+
 ## Environments
 
 ### Preview (https://preview.diva.cora.epc.ub.uu.se/rest)
