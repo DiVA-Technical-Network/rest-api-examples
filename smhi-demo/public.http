@@ -1,0 +1,69 @@
+### Get a single publication in XML format
+
+GET https://mig-smhi.pre.diva-portal.org/rest/record/diva-output/2159
+Accept: application/vnd.cora.record+xml
+
+
+### Get a single publication in JSON format
+
+GET https://mig-smhi.pre.diva-portal.org/rest/record/diva-output/2159
+Accept: application/vnd.cora.record+json
+
+
+### Get a binary record (file wrapper)
+
+GET https://mig-smhi.pre.diva-portal.org/rest/record/binary/binary:10533026229849381
+Accept: application/vnd.cora.record+xml
+
+
+### Download a binary file
+https://mig-smhi.pre.diva-portal.org/rest/record/binary/binary:10533026229849381/master
+
+
+### Search for publications in XML format
+
+# <?xml version="1.0" encoding="UTF-8"?>
+# <search>
+#     <include>
+#         <includePart>
+#             <permissionUnitLinkedRecordIdSearchTerm>permissionUnit_smhi</permissionUnitLinkedRecordIdSearchTerm>
+#             <genericSearchTerm>nederbörd</genericSearchTerm>
+#         </includePart>
+#     </include>
+#     <start>1</start>
+#     <rows>100</rows>
+#</search>
+
+GET https://mig-smhi.pre.diva-portal.org/rest/record/searchResult/outputPublicSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><permissionUnitLinkedRecordIdSearchTerm>permissionUnit_smhi</permissionUnitLinkedRecordIdSearchTerm><genericSearchTerm>nederbörd</genericSearchTerm></includePart></include><start>1</start><rows>100</rows></search>
+Accept: application/vnd.cora.recordList+xml
+
+### Search for publications in JSON format
+
+# JSON search data:
+# {
+#     "name": "search",
+#     "children": [
+#         {
+#             "name": "include",
+#             "children": [
+#                 {
+#                     "name": "includePart",
+#                     "children": [
+#                         {
+#                             "name": "permissionUnitLinkedRecordIdSearchTerm",
+#                             "value": "permissionUnit_smhi"
+#                         },
+#                         {
+#                             "name": "visibilitySearchTerm",
+#                             "value": "published"
+#                         },
+#                     ]
+#                 }
+#             ]
+#         },
+#         { "name": "start", "value": "1" },
+#         { "name": "rows", "value": "100" }
+#     ]
+# }
+GET https://mig-smhi.pre.diva-portal.org/rest/record/searchResult/outputPublicSearch?searchData=%7B%22name%22%3A%22search%22%2C%22children%22%3A%5B%7B%22name%22%3A%22include%22%2C%22children%22%3A%5B%7B%22name%22%3A%22includePart%22%2C%22children%22%3A%5B%7B%22name%22%3A%22permissionUnitLinkedRecordIdSearchTerm%22%2C%22value%22%3A%22permissionUnit_smhi%22%7D%2C%7B%22name%22%3A%22genericSearchTerm%22%2C%22value%22%3A%22nederb%C3%B6rd%22%7D%5D%7D%5D%7D%5D%7D
+Accept: application/vnd.cora.recordList+json

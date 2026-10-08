@@ -1,5 +1,5 @@
 ### Search for publications with the title "Skansen"
-GET https://pre.diva-portal.org/rest/record/searchResult/diva-outputSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><titleSearchTerm>Skansen</titleSearchTerm></includePart></include><start>1</start><rows>20</rows></search>
+GET https://mig-norden.pre.diva-portal.org/rest/record/searchResult/outputPublicSearch?searchData=<?xml version="1.0" encoding="UTF-8"?><search><include><includePart><permissionUnitLinkedRecordIdSearchTerm>permissionUnit_norden</permissionUnitLinkedRecordIdSearchTerm><visibilitySearchTerm>published</visibilitySearchTerm></includePart></include><start>1</start><rows>100</rows></search>
 Accept: application/vnd.cora.recordList+xml
 
 ### Search for publications with the title "Skansen"

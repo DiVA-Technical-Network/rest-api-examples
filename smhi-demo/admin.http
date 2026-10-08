@@ -1,15 +1,28 @@
-### Create an output record of type publication_book
-POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-output
+### Log in with app token
+# Authenticates the user and returns an authentication token that can be used in subsequent requests to authenticate the user.
+# Use personal login id and app token or use an example user (see above)
+# The response includes a token that can be sent in the AuthToken header of subsequent requests to authenticate the user.
+# The token is valid for a short time (usually 10 minutes) and can be renewed by sending a request
+POST https://mig-smhi.pre.diva-portal.org/login/rest/apptoken
+Content-Type: application/vnd.cora.login
+Accept: application/vnd.cora.authentication+json
+
+demo@smhi.se
+afe5a9cd-49ff-40f8-b7af-3f1c22018591
+
+
+### Create a publication
+POST https://mig-smhi.pre.diva-portal.org/rest/record/diva-output
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: 101d9ffd-c29e-412c-9894-c0d69170280f
+AuthToken: 3ba35aa9-dc5a-458e-bc08-a6145cd7cf76
 
 <?xml version="1.0" encoding="UTF-8"?>
 <output>
     <recordInfo>
         <validationType>
             <linkedRecordType>validationType</linkedRecordType>
-            <linkedRecordId>publication_book</linkedRecordId>
+            <linkedRecordId>publication_report</linkedRecordId>
         </validationType>
     <dataDivider>
         <linkedRecordType>system</linkedRecordType>
@@ -17,12 +30,12 @@ AuthToken: 101d9ffd-c29e-412c-9894-c0d69170280f
     </dataDivider>
     <permissionUnit>
         <linkedRecordType>permissionUnit</linkedRecordType>
-        <linkedRecordId>uu</linkedRecordId>
+        <linkedRecordId>smhi</linkedRecordId>
     </permissionUnit>
     <visibility>published</visibility>
     </recordInfo>
     <dataQuality>2026</dataQuality>
-    <genre type="outputType">publication_book</genre>
+    <genre type="outputType">publication_report</genre>
     <language repeatId="0">
         <languageTerm type="code" authority="iso639-2b">swe</languageTerm>
     </language>
@@ -34,8 +47,8 @@ AuthToken: 101d9ffd-c29e-412c-9894-c0d69170280f
         <namePart type="given">Test</namePart>
         <namePart type="family">Testsson</namePart>
         <nameIdentifier type="localId">test</nameIdentifier>
-        <role>
-            <roleTerm repeatId="0">aut</roleTerm>
+        <role repeatId="0">
+            <roleTerm>aut</roleTerm>
         </role>
         <affiliation repeatId="0">
             <namePart>Testuniversitetet</namePart>
@@ -60,3 +73,44 @@ AuthToken: 101d9ffd-c29e-412c-9894-c0d69170280f
     <classification authority="ssif" repeatId="0">1</classification>
     <identifier type="isbn" displayLabel="print" repeatId="0">3880531013</identifier>
 </output>
+
+
+### Create a binary record
+POST https://mig-smhi.pre.diva-portal.org/rest/record/binary
+Content-Type: application/vnd.cora.recordgroup+xml
+Accept: application/vnd.cora.record+xml
+AuthToken: 3ba35aa9-dc5a-458e-bc08-a6145cd7cf76
+
+<?xml version="1.0" encoding="UTF-8"?>
+<binary type="generic">
+    <recordInfo>
+        <validationType>
+            <linkedRecordType>validationType</linkedRecordType>
+            <linkedRecordId>genericBinary</linkedRecordId>
+        </validationType>
+        <dataDivider>
+            <linkedRecordType>system</linkedRecordType>
+            <linkedRecordId>divaData</linkedRecordId>
+        </dataDivider>
+        <visibility>published</visibility>
+        <hostRecord>
+            <linkedRecordType>diva-output</linkedRecordType>
+            <linkedRecordId>5159</linkedRecordId>
+        </hostRecord>
+    </recordInfo>
+    <originalFileName>FULLTEXT.pdf</originalFileName>
+    <expectedFileSize>5853608</expectedFileSize>
+    <expectedChecksum>fdc70efd6e8bc84415df735b33f5ab53794743785c001fe66dd711ac711d1f6ecaa71ef703fd8acdf4ebbcc7c973acfd3e1a9a72b050bfa5faf971231a5288fb</expectedChecksum>
+</binary>
+
+### Upload binary file
+POST https://mig-smhi.pre.diva-portal.org/rest/record/binary/binary:10558586117406505/master
+AuthToken: 8eb2bd4e-cbcf-437e-bd3d-a525be35aa7f
+Content-Type: multipart/form-data; boundary=UploadBoundary
+
+--UploadBoundary
+Content-Disposition: form-data; name="file"; filename="FULLTEXT.pdf"
+Content-Type: application/pdf
+
+< ./data/FULLTEXT.pdf
+--UploadBoundary--

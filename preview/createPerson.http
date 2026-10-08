@@ -1,7 +1,7 @@
 POST https://preview.diva.cora.epc.ub.uu.se/rest/record/diva-person
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+AuthToken: 2d85e301-1de5-4038-a6a6-87c9c8388357
 
 <?xml version="1.0" encoding="UTF-8"?>
 <person>
@@ -14,15 +14,16 @@ AuthToken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
             <linkedRecordType>system</linkedRecordType>
             <linkedRecordId>divaData</linkedRecordId>
         </dataDivider>
+        <oldId>authority-person:123</oldId>
     </recordInfo>
     <authority>
         <name type="personal">
-            <namePart type="given">Test</namePart>
-            <namePart type="family">Testsson</namePart>
+            <namePart type="given">Tesssst</namePart>
+            <namePart type="family">aaa</namePart>
         </name>
     </authority>
     <email repeatId="0">test@test.com</email>
-    <nameIdentifier type="orcid" repeatId="0">0000-0002-1825-0097</nameIdentifier>
+    <nameIdentifier type="orcid" repeatId="0">0000-0002-1825-0099</nameIdentifier>
     <affiliation repeatId="0">
         <namePart>Testuniversitetet</namePart>
         <country>se</country>

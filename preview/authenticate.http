@@ -14,9 +14,8 @@ POST https://preview.diva.cora.epc.ub.uu.se/login/rest/apptoken
 Content-Type: application/vnd.cora.login
 Accept: application/vnd.cora.authentication+json
 
-dominAdminUU@diva.cora.uu.se
-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-
+divaAdmin@cora.epc.ub.uu.se
+5e197392-f1d7-49a4-89ad-80431adf4e87
 
 ### Renew token
 # If the token is expired, you can renew it by sending a request to the renew endpoint
@@ -24,3 +23,47 @@ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 POST https://preview.diva.cora.epc.ub.uu.se/login/rest/authToken/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Accept: application/vnd.cora.authentication+json
 Authtoken: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<output>
+	<recordInfo>
+		<validationType>
+			<linkedRecordType>validationType</linkedRecordType>
+			<linkedRecordId>artistic-work_artistic-thesis</linkedRecordId>
+		</validationType>
+		<dataDivider>
+			<linkedRecordType>system</linkedRecordType>
+			<linkedRecordId>divaData</linkedRecordId>
+		</dataDivider>
+		<permissionUnit>
+			<linkedRecordType>permissionUnit</linkedRecordType>
+			<linkedRecordId>diva</linkedRecordId>
+		</permissionUnit>
+		<visibility>published</visibility>
+	</recordInfo>
+    <dataQuality>2026</dataQuality>
+	<genre type="outputType">artistic-work_artistic-thesis</genre>
+	<language repeatId="0">
+		<languageTerm authority="iso639-2b" type="code">ger</languageTerm>
+	</language>
+    <artisticWork type="outputType">true</artisticWork>
+    <genre type="contentType">vet</genre>
+    <titleInfo lang="ger">
+        <title>TestTitle</title>
+        <subtitle>TestSubtitle</subtitle>
+    </titleInfo>
+    <titleInfo type="alternative" lang="swe" repeatId="0">
+        <title>Svensk titel</title>
+        <subtitle>Svensk undertitel</subtitle>
+    </titleInfo>
+	<originInfo>
+		<dateIssued>
+			<year>2025</year>
+		</dateIssued>
+	</originInfo>
+	<classification authority="ssif" repeatId="0">1</classification>
+</output>
