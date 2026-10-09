@@ -8,7 +8,7 @@ app_token = "your-apptoken"
 def main():
     auth_token = login(login_id, app_token)
 
-    with open("smhi-demo/data/person_import.csv", newline="") as csvfile:
+    with open("smhi/data/person_import.csv", newline="") as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             first_name = row["firstName"]
@@ -58,7 +58,7 @@ def import_person(first_name, last_name, email, auth_token):
     </person>"""
 
     response = requests.post(
-        "https://jenkins.pre.diva-portal.org/rest/record/diva-person",
+        "https://mig-smhi.pre.diva-portal.org/rest/record/diva-person",
         headers={
             "Content-Type": "application/vnd.cora.recordgroup+xml",
             "Accept": "application/vnd.cora.record+xml",
@@ -67,3 +67,6 @@ def import_person(first_name, last_name, email, auth_token):
         data=person_xml,
     )
     response.raise_for_status()
+
+
+main()
