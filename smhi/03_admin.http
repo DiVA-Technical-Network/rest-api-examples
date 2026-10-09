@@ -8,14 +8,15 @@ Content-Type: application/vnd.cora.login
 Accept: application/vnd.cora.authentication+json
 
 demo@smhi.se
-afe5a9cd-49ff-40f8-b7af-3f1c22018591
+YOUR_APP_TOKEN
 
 
 ### Create a publication
+
 POST https://mig-smhi.pre.diva-portal.org/rest/record/diva-output
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: 3ba35aa9-dc5a-458e-bc08-a6145cd7cf76
+AuthToken: YOUR_AUTH_TOKEN
 
 <?xml version="1.0" encoding="UTF-8"?>
 <output>
@@ -79,7 +80,7 @@ AuthToken: 3ba35aa9-dc5a-458e-bc08-a6145cd7cf76
 POST https://mig-smhi.pre.diva-portal.org/rest/record/binary
 Content-Type: application/vnd.cora.recordgroup+xml
 Accept: application/vnd.cora.record+xml
-AuthToken: 3ba35aa9-dc5a-458e-bc08-a6145cd7cf76
+AuthToken: YOUR_AUTH_TOKEN
 
 <?xml version="1.0" encoding="UTF-8"?>
 <binary type="generic">

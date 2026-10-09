@@ -27,7 +27,7 @@ response.raise_for_status()
 
 xml = ET.fromstring(response.text)
 
-with open("smhi-demo/results.csv", "w", newline="", encoding="utf-8") as csv_file:
+with open("smhi/data/results.csv", "w", newline="", encoding="utf-8") as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(["id", "title"])
     for record in xml.findall("./data/record/data"):
