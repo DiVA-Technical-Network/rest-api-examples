@@ -19,7 +19,7 @@ def main():
 
 def login(login_id, app_token):
     login_response = requests.post(
-        "https://jenkins.pre.diva-portal.org/login/rest/apptoken",
+        "https://mig-smhi.pre.diva-portal.org/login/rest/apptoken",
         headers={
             "Content-Type": "application/vnd.cora.login",
             "Accept": "application/vnd.cora.authentication+json",
